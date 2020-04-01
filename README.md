@@ -8,40 +8,40 @@
 
 <p align="center">
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager">
     <img alt="Open Source" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
   </a>
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager/graphs/contributors">
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager/graphs/contributors">
+    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/lpmatos/kubeclt-context-manager">
   </a>
   
-  <a href="https://github.com/lpmatos/kubectl-context-manager">
-    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager">
+    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/lpmatos/kubeclt-context-manager">
   </a>
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager">
-    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager">
+    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/lpmatos/kubeclt-context-manager">
   </a>
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager/stargazers">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/lpmatos/kubectl-context-manager?style=social">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager/stargazers">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/lpmatos/kubeclt-context-manager?style=social">
   </a>
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager/commits/master">
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager/commits/master">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/lpmatos/kubeclt-context-manager">
   </a>
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager">
-    <img alt="Repository Size" src="https://img.shields.io/github/repo-size/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager">
+    <img alt="Repository Size" src="https://img.shields.io/github/repo-size/lpmatos/kubeclt-context-manager">
   </a>
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager/issues">
-    <img alt="Repository Issues" src="https://img.shields.io/github/issues/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager/issues">
+    <img alt="Repository Issues" src="https://img.shields.io/github/issues/lpmatos/kubeclt-context-manager">
   </a>
 
-  <a href="https://github.com/lpmatos/kubectl-context-manager/blob/master/LICENSE">
-    <img alt="MIT License" src="https://img.shields.io/github/license/lpmatos/kubectl-context-manager">
+  <a href="https://github.com/lpmatos/kubeclt-context-manager/blob/master/LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/github/license/lpmatos/kubeclt-context-manager">
   </a>
 </p>
 
@@ -63,7 +63,7 @@
 To use this repository you need to make a **git clone**:
 
 ```bash
-git clone --depth 1 https://github.com/lpmatos/kubectl-context-manager.git -b master
+git clone --depth 1 https://github.com/lpmatos/kubeclt-context-manager.git -b master
 ```
 
 Pull requests are welcome. If you'd like to support the work and buy me a ☕, I greatly appreciate it!
@@ -120,7 +120,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubectl-context-manager/commits?author=lpmatos" title="Code">💻</a></a></td>
+    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubeclt-context-manager/commits?author=lpmatos" title="Code">💻</a></a></td>
   <tr>
 </table>
 
@@ -128,7 +128,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubectl-context-manager/commits?author=lpmatos" title="Code">💻</a> <a href="#lpmatos" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubeclt-context-manager/commits?author=lpmatos" title="Code">💻</a> <a href="#lpmatos" title="Design">🎨</a></td>
   <tr>
 </table>
 

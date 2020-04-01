@@ -5,3 +5,5 @@ All important changes to this project will be added to this file! This changelog
 ## 1.0.0
 
 ### Added
+
+* Adding first versin of manager.sh:

@@ -4,6 +4,38 @@
 #### Automating Kubectl Contexts        ####
 ############################################
 
+os=`uname`
+
+if [ "${os}" = "Linux" ]
+then
+    date_cmd="date"
+else
+    date_cmd="gdate"
+fi
+
+# =============================================================================
+# VALUES
+# =============================================================================
+
+date_info=$(${date_cmd} +"%Y-%m-%d %T")
+date_info_short=$(${date_cmd} +"%A %B")
+user=$(whoami)
+CMD=$1
+
+# =============================================================================
+# OUTPUT-COLORING
+# =============================================================================
+
+# High Intensity
+BLACK='\033[0;90m'       # Black
+RED='\033[0;91m'         # Red
+GREEN='\033[0;92m'       # Green
+YELLOW='\033[0;93m'      # Yellow
+BLUE='\033[0;94m'        # Blue
+PURPLE='\033[0;95m'      # Purple
+CYAN='\033[0;96m'        # Cyan
+NC='\033[0;97m'          # White
+
 # =============================================================================
 # FUNCTIONS
 # =============================================================================
@@ -73,25 +105,36 @@ EOF
 # =============================================================================
 
 function help() {
+  local PROGNAME=$(basename $0)
+  echo -e "\n${CYAN}Script $PROGNAME: By ${YELLOW}Lucca Pessoa.${NC}"
   cat <<EOF
 
 Interactively change the current context.
 
 Usage:
-  ctx [-l]
+  manager [-c]
+  manager [-l]
+  manager [-i]
+  manager [-ns]
+  manager [-po]
+  manager [-h]
 
 Examples:
 
   # Interactively change the current context
-  kubectl ctx
+  kubectl manager
 
   # List all contexts (indicating current context with a '*')
-  kubectl ctx -l
+  kubectl manager -l
 
 
 Flags:
-  -l          List all available contexts
-  -h, --help  Show this help message
+  -c, c, change, --change             Change Kubectl Context
+  -l, ls, l, --list                   List all available contexts
+  -i, i, info, --info                 Some information about namespaces and pods
+  -ns, ns, namespace, --namespace     List all namespaces
+  -po, po, pods, --pods               List all pods in all namespaces
+  -h, h, help, --help                 Show this help message
 
 
 EOF
@@ -100,34 +143,41 @@ EOF
 # =============================================================================
 
 function welcome(){
-  date_info=$(date +"%Y-%m-%d %T")
-  date_info_short=$(date +"%A %B")
-  user=$(whoami)
   echo -e "\n"
-  echo "Kubectl Plugin" | figlet
-  echo -e "\n"
-  echo -e "-------------------------------------------------"
+  echo "Kubectl Manager" | figlet
+  echo -e "\n-------------------------------------------------"
   echo "* Welcome ${user}! It's now ${date_info_short}"
   echo -e "* ${date_info}"
+  echo -e "* System - ${os}"
   echo -e "*"
   echo -e "*"
-  echo -e "* Current Context is $(kubectl config current-context 2>/dev/null)"
-  echo -e "* Total of Contexts is $(kubectl config get-contexts | sed -e '1d' | wc -l)"
+  echo -e "* Current Context - ${YELLOW}$(kubectl config view -o=jsonpath='{.current-context}' 2>/dev/null)${NC}"
+  echo -e "* Total of Contexts - ${YELLOW}$(kubectl config get-contexts 2> /dev/null | sed -e '1d' | wc -l)${NC}"
+  echo -e "-------------------------------------------------\n"
+}
+
+# =============================================================================
+
+function info(){
+  echo -e "\n-------------------------------------------------"
+  echo -e "* Total of Namespaces - ${YELLOW}$(kubectl get ns 2> /dev/null | wc -l)${NC}"
+  echo -e "* Total of Pods - ${YELLOW}$(kubectl get pods --all-namespaces 2> /dev/null | wc -l)${NC}"
   echo -e "-------------------------------------------------\n"
 }
 
 # =============================================================================
 
 function getContexts() {
-  kubectl config get-contexts
+  kubectl config get-contexts | sed -e "1d"
 }
 
 # =============================================================================
 
 function setContext() {
-  local context=$(getContexts | fzf | awk {' print $1 '})
-  if [[ -z "${context}" ]]; then
-    echo "Aborted. Nothing has been changed."
+  type fzf 2> /dev/null || { missingFZF; exit 1; }
+  local context=$(getContexts | fzf | awk {' print $1 '} | sort -n)
+  if [[ -z "${context}" || "${context}" == "*" ]]; then
+    echo -e "\n${RED}Aborted. Nothing has been changed.${NC}"
   else
     kubectl config use-context "${context}"
   fi
@@ -137,16 +187,39 @@ function setContext() {
 # MAIN
 # =============================================================================
 
-type fzf 2> /dev/null || { missingFZF; exit 1; }
 type kubectl 2> /dev/null || { missingKubectl; exit 1; }
 type figlet 2> /dev/null || { missingFiglet; exit 1; }
 
 welcome
 
-if [[ -z "$1" ]]; then
+# =============================================================================
+# OPTIONS
+# =============================================================================
+
+if [ -z "$CMD" ]; then
   setContext
-elif [[ "$1" = -l ]]; then
-  getContexts
 else
-  help
+  case $CMD in
+    "c"|"-c"|"change"|"--change")
+      setContext
+      ;;
+    "ls"|"-l"|"l"|"--list")
+      getContexts
+      ;;
+    "info"|"-i"|"i"|"--info")
+      info
+      ;;
+    "ns"|"-ns"|"namespaces"|"--namespaces")
+      kubectl get ns
+      ;;
+    "po"|"-po"|"pods"|"--pods")
+      kubectl get po --all-namespaces
+      ;;
+    "help"|"-h"|"h"|"--help")
+      help
+      ;;
+    *)
+      echo -e "Unknown command $CMD"
+      help && exit 1 ;;
+  esac
 fi

@@ -7,7 +7,7 @@ chmod +x ./manager && \
 echo -e "Move manager to /usr/local/bin..."
 mv ./manager /usr/local/bin/manager 
 
-if [ -f "usr/local/bin/manager" ]; then
+if [ -f "/usr/local/bin/manager" ]; then
   echo -e "\nInstall complete! Please restart your shell."
 else
   echo -e "\nInstall failed!" && exit 0

@@ -3,7 +3,8 @@ type curl 2> /dev/null || { echo "curl not install" ; exit 1; }
 if [ -f "usr/local/bin/manager" ]; then
   echo "Install complete! Please restart your shell."
 else
-  curl -L "https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/manager.sh" -O /usr/local/bin/manager
+  curl -O https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/manager.sh 
+  cp ./manager.sh /usr/local/bin/manager && rm -rf ./manager.sh
   chmod +x /usr/local/bin/manager
   echo "Install failed!"
   exit 0

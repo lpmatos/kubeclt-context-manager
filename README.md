@@ -74,25 +74,23 @@ To this project you yeed:
 - Bash.
 - Linux System.
 - Install manager dependencies:
-  - FZF.
-  - Figlet.
-  - Kubectl
+  - **FZF**.
+  - **Figlet**.
+  - **Kubectl**.
 
 ## Built with
 
-- Dev Tools
+- **Dev Tools**
   - [Bash](https://www.gnu.org/software/bash/)
 
-- Others
+- **Other Tools**
   - [FZF](https://github.com/junegunn/fzf)
   - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 ## How to use it?
 
-1. Install the plugin.
-2. Run.
-
-Press -h to get more information about all used params.
+1. Install the plugin in your System.
+2. Run the manager.
 
 ## Description
 
@@ -105,15 +103,13 @@ Besides everything, there are other features:
 * Cluster information about all pods in all namespaces.
 * Information about pods status in all namespaces.
 * List o your contexts.
-* Describre pods each namespace.
+* Describe pods each namespace.
 
 ## Kubectl
 
 ![Alt text](docs/images/KUBECTL.PNG?raw=true "Kubectl")
 
-Kubectl is a command line tool for controlling Kubernetes clusters.
-
-For more information, access the [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) documentation or [this](docs/annotations/commands.md).
+Kubectl is a command line tool for controlling Kubernetes clusters. For more information, access the [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) documentation or [this](docs/annotations/commands.md).
 
 ## Installation
 

@@ -2,7 +2,18 @@
 
 All important changes to this project will be added to this file! This changelog will be based on [Keep a change log](http://keepachangelog.com/)
 
-## 1.0.0
+## 2.0.0 - [12-04-2020]
+
+### Added
+
+* Dockerfile support.
+* Docker-compose support.
+* Dot-Env support.
+* Editorconfig.
+* Docker Setup script.
+* Create function DescribrePodsEachNamespace in manager script.
+
+## 1.0.0 - [11-04-2020]
 
 ### Added
 
@@ -14,7 +25,7 @@ All important changes to this project will be added to this file! This changelog
 * Create install script.
 * README.md, CHANGELOG.md and LICENSE.
 * Adding docs folder with some images and annotations about kubectl commands.
-* Functions: 
+* Functions:
   * missingFZF()
   * missingKubectl()
   * missingFiglet()

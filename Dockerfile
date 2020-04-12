@@ -1,4 +1,6 @@
 ARG ALPINE_VERSION=3.11
+ARG KUBECONFIG=/root/.kube/config
+ARG KUBECONFIG_CLUSTER
 
 FROM alpine:${ALPINE_VERSION}
 
@@ -11,7 +13,8 @@ LABEL maintainer="Lucca Pessoa da Silva Matos - luccapsm@gmail.com" \
         org.label-schema.kubectl="https://kubernetes.io/docs/tasks/tools/install-kubectl/" \
         org.label-schema.name="Kubectl Context Manager"
 
-ENV HOME=/usr/src/code
+ENV KUBECONFIG=${KUBECONFIG} \
+    KUBECONFIG_CLUSTER=${KUBECONFIG_CLUSTER}
 
 RUN apk update && apk add --update --no-cache \
         curl=7.67.0-r0 \
@@ -20,15 +23,9 @@ RUN apk update && apk add --update --no-cache \
         fzf=0.19.0-r1 \
         bash=5.0.11-r1  && \
     curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
-    chmod +x ./kubectl && \
-    mv ./kubectl /usr/local/bin/kubectl && \
-    mkdir -p /root/.kube
+    chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl && mkdir -p /root/.kube
 
-WORKDIR ${HOME}
-
-COPY [ "./code/docker.sh", "." ]
-
-RUN find ./ -iname "*.sh" -type f -exec chmod a+x {} \; -exec echo {} \;;
+RUN curl -LO https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/setup/docker.sh && chmod +x ./docker.sh
 
 ENTRYPOINT []
 

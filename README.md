@@ -147,6 +147,7 @@ rm -rf ./manager.sh
 
 * https://kubernetes.io/pt/docs/reference/kubectl/cheatsheet/
 * https://medium.com/platformer-blog/using-kubernetes-secrets-5e7530e0378a
+* https://forums.docker.com/t/docker-compose-entrypoint-bin-sh-c-exit-code-always-0-when-exit-with-shell-variable-error-value/60204
 
 ## 🎒 How to contribute
 

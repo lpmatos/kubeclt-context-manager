@@ -1,4 +1,4 @@
-# Some Docker Commands
+# Docker Commands
 
 ## Exec
 

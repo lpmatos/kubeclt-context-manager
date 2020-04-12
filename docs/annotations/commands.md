@@ -81,6 +81,7 @@ spec:
 			- name: shared-data
 				mountPath: /usr/share/nginx/html
 ```
+
 - kubectl get pod [pod]	
 - kubectl exec -it [pod] -- /bin/bash
 

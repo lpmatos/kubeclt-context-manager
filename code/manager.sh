@@ -182,7 +182,7 @@ function GetKubectlContexts() {
 # =============================================================================
 
 function SetContext() {
-  which fzf 2> /dev/null || { MissingFZF; exit 1; }
+  [ $(which fzf 2> /dev/null) ] || { MissingFZF; exit 1; }
   local CONTEXT=$(GetKubectlContexts | fzf | awk {' print $1 '} | sort -n)
   if [[ -z "${CONTEXT}" || "${CONTEXT}" == "*" ]]; then
     echo -e "\n${RED}Aborted. Nothing has been changed.${NC}"

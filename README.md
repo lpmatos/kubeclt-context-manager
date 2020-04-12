@@ -133,6 +133,56 @@ cp ./manager.sh /usr/local/bin/manager
 rm -rf ./manager.sh
 ```
 
+## 🐋 Development with Docker
+
+Steps to build a Docker Image.
+
+### Build
+
+```bash
+docker image build -t <IMAGE_NAME> -f <PATH_DOCKERFILE> <PATH_CONTEXT_DOCKERFILE>
+docker image build -t <IMAGE_NAME> . (This context)
+```
+
+### Run
+
+Steps to run a Docker Container.
+
+* **Linux** running:
+
+```bash
+docker container run -d -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME> <COMMAND>
+docker container run -it --rm --name <CONTAINER_NAME> -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME> <COMMAND>
+```
+
+* **Windows** running:
+
+```
+winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
+```
+
+For more information, access the [Docker](https://docs.docker.com/) documentation or [this](docs/annotations/docker.md).
+
+## 🐋 Development with Docker Compose
+
+Build and run a docker-compose.
+
+```bash
+docker-compose up --build
+```
+
+Down all services deployed by docker-compose.
+
+```bash
+docker-compose down
+```
+
+Down all services and delete all images.
+
+```bash
+docker-compose down --rmi all
+```
+
 ## Usage
 
 <kbd>manager --help</kbd> - Helper

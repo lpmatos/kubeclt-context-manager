@@ -27,9 +27,7 @@ NC='\033[0;97m'          # White
 # ==============================================================================
 
 OS=`uname`
-
-if [ "${OS}" = "Linux" ]; then DATE_CMD="date"; else DATE_CMD="gdate"; fi
-
+[ "${OS}" = "Linux" ] && DATE_CMD="date" || DATE_CMD="gdate"
 DATE_INFO=$(${DATE_CMD} +"%Y-%m-%d %T")
 DATE_INFO_SHORT=$(${DATE_CMD} +"%A %B")
 USER=$(whoami)
@@ -40,7 +38,7 @@ URL="https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/ma
 # FUNCTIONS
 # ==============================================================================
 
-function welcome(){
+function Welcome(){
   echo -e "\n"
   echo "Install Kubectl Manager" | figlet
   echo -e "\n-------------------------------------------------"
@@ -48,30 +46,34 @@ function welcome(){
   echo -e "* ${DATE_INFO}"
   echo -e "* System - ${OS}"
   echo -e "*"
-  echo -e "* Autor: Lucca Pessoa da Silva Matos"
-  echo -e "* Description: Install Kubectl Context Manager"
+  echo -e "* Autor: ${YELLOW}Lucca Pessoa da Silva Matos${YELLOW}${NC}"
+  echo -e "* Description: ${BLUE}Install Kubectl Context Manager${BLUE}${NC}"
   echo -e "-------------------------------------------------\n"
+}
+
+function ManagerAlredyExist(){
+  echo -e "\nManager Alredy in your Syste! Bye Bye!\n" && exit 1
+} 
+
+function InstallManager(){
+  echo -e "\n${YELLOW}Install Manager...${YELLOW}${NC}"
+  curl -LO ${URL}
+  echo -e "\n${YELLOW}Given permissions...${YELLOW}${NC}"
+  chmod +x ./manager
+  echo -e "\n${YELLOW}Move manager to${YELLOW}${NC} ${BLUE}/usr/local/bin...${BLUE}${NC}"
+  mv ./manager /usr/local/bin/manager 
 }
 
 # ==============================================================================
 # MAIN
 # ==============================================================================
 
-welcome
+Welcome
 
-if [ -f "/usr/local/bin/manager" ]; then
-  echo -e "\nManager Alredy in your Syste! Bye Bye!\n" && exit 1
-else
-  echo -e "\nInstall Manager..."
-  curl -LO ${URL}
-  echo -e "Given permissions..."
-  chmod +x ./manager
-  echo -e "Move manager to /usr/local/bin..."
-  mv ./manager /usr/local/bin/manager 
-fi
+[ -f "/usr/local/bin/manager" ] && ManagerAlredyExist || InstallManager
 
 # ==============================================================================
 # VALIDATION
 # ==============================================================================
 
-type manager 2> /dev/null || { echo -e "\nManager installation failed! Exit..." ; exit 1; }
+[ $(which manager) ] && echo -e "\n${GREEN}Successful Installation!\n${GREEN}${NC}" || echo -e "\n${RED}Manager installation failed! Exit...\n${RED}${NC}"; exit 1

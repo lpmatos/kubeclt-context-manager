@@ -20,6 +20,17 @@ services:
     build:
       context: ./${PATH_DOCKERFILE}
       dockerfile: Dockerfile
+    entrypoint: >
+      /bin/sh -c "
+        set -e
+        ./docker.sh
+        /bin/bash || exit 0
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/install.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     restart: unless-stopped
     stdin_open: true
     tty: true

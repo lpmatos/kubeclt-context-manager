@@ -66,16 +66,16 @@ This is a list with the most used commands in kubectl.
 - kubectl create -f [pod-specification].yaml
 
 ```yml
-		apiVersion: v1
-		kind: Pod
-		metadata:
-		  name: shell-demo
-		spec:
-		  volumes:
-		  - name: shared-data
+apiVersion: v1
+kind: Pod
+metadata:
+	name: shell-demo
+spec:
+	volumes:
+		- name: shared-data
 			emptyDir: {}
-		  containers:
-		  - name: nginx
+	containers:
+		- name: nginx
 			image: nginx
 			volumeMounts:
 			- name: shared-data

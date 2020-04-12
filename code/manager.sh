@@ -120,6 +120,7 @@ Flags:
   -l, ls, l, --list                   List all available contexts
   -i, i, info, --info                 Some information about namespaces and pods
   -ns, ns, namespace, --namespace     List all namespaces
+    describe                          Param to use with ns that describre all pods in all namespaces
   -po, po, pods, --pods               List all pods in all namespaces
   -h, h, help, --help                 Show this help message
 

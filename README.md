@@ -75,10 +75,73 @@ To this project you yeed:
 
 - Bash.
 - Linux System.
-- Install manager dependencies.
+- Install manager dependencies:
+  - FZF.
+  - Figlet.
+  - Kubectl
 
-## References
+## Built with
 
+- Dev Tools
+  - [Bash](https://www.gnu.org/software/bash/)
+
+## How to use it?
+
+1. Install the plugin.
+2. Run.
+
+Press -h to get more information about all used params.
+
+## Description
+
+Why do boring task to change a kubectl context, when u can do this in a simple command? This is a simple Bash script that perform this for you.
+
+![Alt text](docs/images/MANAGER.PNG?raw=true "Manager")
+
+Besides everything, there are other features:
+
+* Cluster information about all pods in all namespaces.
+* Information about pods status in all namespaces.
+* List o your contexts.
+* Describre pods each namespace.
+
+## Kubectl
+
+![Alt text](docs/images/KUBECTL.PNG?raw=true "Kubectl")
+
+Kubectl is a command line tool for controlling Kubernetes clusters.
+
+For more information, access the [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) documentation or [this](docs/annotations/commands.md). 
+
+## Installation
+
+To install this plugin you can run the installation script:
+
+```bash
+git clone https://github.com/lpmatos/kubeclt-context-manager.git
+bash install.sh
+```
+
+Or manually:
+
+```bash
+curl -LO https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/code/manager.sh
+chmod +x ./manager.sh
+cp ./manager.sh /usr/local/bin/manager
+rm -rf ./manager.sh
+```
+
+## Usage
+
+<kbd>manager --help</kbd> - Helper
+
+## Params
+
+![Alt text](docs/images/USAGE.PNG?raw=true "Usage")
+
+## Link Reference
+
+* https://kubernetes.io/pt/docs/reference/kubectl/cheatsheet/
 * https://medium.com/platformer-blog/using-kubernetes-secrets-5e7530e0378a
 
 ## 🎒 How to contribute
@@ -129,7 +192,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubeclt-context-manager/commits?author=lpmatos" title="Code">💻</a></a></td>
+    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubectl-context-manager/commits?author=lpmatos" title="Code">💻</a></a></td>
   <tr>
 </table>
 
@@ -137,7 +200,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubeclt-context-manager/commits?author=lpmatos" title="Code">💻</a> <a href="#lpmatos" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/kubectl-context-manager/commits?author=lpmatos" title="Code">💻</a> <a href="https://github.com/lpmatos/kubectl-context-manager/commits?author=lpmatos" title="Design">🎨</a></td>
   <tr>
 </table>
 

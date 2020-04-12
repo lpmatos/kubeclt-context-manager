@@ -129,7 +129,7 @@ bash install.sh
 Or manually:
 
 ```bash
-curl -LO https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/code/manager.sh
+curl -LO https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/install.sh
 chmod +x ./manager.sh
 cp ./manager.sh /usr/local/bin/manager
 rm -rf ./manager.sh

@@ -1,13 +1,14 @@
 <p align="center">
-  <img alt="description" src="https://churrops.files.wordpress.com/2018/06/kubernetes.jpg?w=1400" width="500px" float="center"/>
+  <img alt="description" src="https://churrops.files.wordpress.com/2018/06/kubernetes.jpg?w=1400" width="250px" float="center"/>
 </p>
+
 <h1 align="center">♻️ Kubectl Context Manager ♻️</h1>
+
 <p align="center">
-  <strong>Basic project to help you manage your kubectl contexts</strong>
+  <strong>Project to help you manage your kubectl contexts</strong>
 </p>
 
 <p align="center">
-
   <a href="https://github.com/lpmatos/kubeclt-context-manager">
     <img alt="Open Source" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
   </a>
@@ -52,21 +53,29 @@
   <a href="#-license">License</a>
 </p>
 
-### Prerequisites
-
-**Tools**
-:---:
-**Bash**
-
 ## ▶️ Getting Started
 
-To use this repository you need to make a **git clone**:
+Starting with **git clone**:
 
 ```bash
 git clone --depth 1 https://github.com/lpmatos/kubeclt-context-manager.git -b master
 ```
 
+This will give access on your local machine to this project.
+
+## Buy me a coffee
+
 Pull requests are welcome. If you'd like to support the work and buy me a ☕, I greatly appreciate it!
+
+<a href="https://www.buymeacoffee.com/EatdMck" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+### Prerequisites
+
+To this project you yeed:
+
+- Bash.
+- Linux System.
+- Install manager dependencies.
 
 ## References
 
@@ -134,8 +143,8 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 ## Project Status
 
-* 🔛 In production
+* ✔️ Finish
 
 ---
 
-<p align="center">Feito com ❤️ by <strong>Lucca Pessoa :wave: </p>
+<p align="center">Feito com ❤️ by <strong>Lucca Pessoa :wave:</p>

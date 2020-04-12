@@ -49,7 +49,7 @@ This is a list with the most used commands in kubectl.
 
 ## Volumes Persistentes
 
--kubectl get pv
+- kubectl get pv
 
 ## Create Job from YAML file
 
@@ -64,7 +64,8 @@ This is a list with the most used commands in kubectl.
 ## Basic container deploy
 
 - kubectl create -f [pod-specification].yaml
-- [pod-specification].yaml
+
+```yml
 		apiVersion: v1
 		kind: Pod
 		metadata:
@@ -78,7 +79,8 @@ This is a list with the most used commands in kubectl.
 			image: nginx
 			volumeMounts:
 			- name: shared-data
-			  mountPath: /usr/share/nginx/html
+				mountPath: /usr/share/nginx/html
+```
 - kubectl get pod [pod]	
 - kubectl exec -it [pod] -- /bin/bash
 
@@ -134,5 +136,7 @@ This is a list with the most used commands in kubectl.
 ## Resources 
 
 kubectl top pod -n [namespace]
+
+## More
 
 For more information access https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands

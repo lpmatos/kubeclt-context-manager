@@ -16,7 +16,7 @@
   <a href="https://github.com/lpmatos/kubeclt-context-manager/graphs/contributors">
     <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/lpmatos/kubeclt-context-manager">
   </a>
-  
+
   <a href="https://github.com/lpmatos/kubeclt-context-manager">
     <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/lpmatos/kubeclt-context-manager">
   </a>
@@ -85,6 +85,10 @@ To this project you yeed:
 - Dev Tools
   - [Bash](https://www.gnu.org/software/bash/)
 
+- Others
+  - [FZF](https://github.com/junegunn/fzf)
+  - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
 ## How to use it?
 
 1. Install the plugin.
@@ -111,7 +115,7 @@ Besides everything, there are other features:
 
 Kubectl is a command line tool for controlling Kubernetes clusters.
 
-For more information, access the [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) documentation or [this](docs/annotations/commands.md). 
+For more information, access the [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) documentation or [this](docs/annotations/commands.md).
 
 ## Installation
 

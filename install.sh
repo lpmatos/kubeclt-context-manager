@@ -32,7 +32,7 @@ DATE_INFO=$(${DATE_CMD} +"%Y-%m-%d %T")
 DATE_INFO_SHORT=$(${DATE_CMD} +"%A %B")
 USER=$(whoami)
 
-URL="https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/code/manage.sh"
+URL="https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/code/manager.sh"
 
 # ==============================================================================
 # FUNCTIONS

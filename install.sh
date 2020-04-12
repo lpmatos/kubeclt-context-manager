@@ -1,12 +1,12 @@
 # ==============================================================================
 ## DESCRIPTION: Setup Install Kubectl Context Manager.
-## NAME: install
+## NAME: install.sh
 ## AUTHOR: Lucca Pessoa da Silva Matos
 ## DATE: 12.04.2020
 ## VERSION: 1.0
 # ==============================================================================
 
-type curl 2> /dev/null || { echo -e "\nCurl not install in your Syste..." ; exit 1; }
+type curl 2> /dev/null || { echo -e "\nCurl not install in your System..." ; exit 1; }
 
 # ==============================================================================
 # OUTPUT-COLORING
@@ -53,7 +53,7 @@ function Welcome(){
 
 function ManagerAlredyExist(){
   echo -e "\nManager Alredy in your Syste! Bye Bye!\n" && exit 1
-} 
+}
 
 function InstallManager(){
   echo -e "\n${YELLOW}Install Manager...${YELLOW}${NC}"

@@ -1,6 +1,6 @@
 # ==============================================================================
 ## DESCRIPTION: Automating Kubectl Contexts Management.
-## NAME: install
+## NAME: manager.sh
 ## AUTHOR: Lucca Pessoa da Silva Matos
 ## DATE: 12.04.2020
 ## VERSION: 1.0
@@ -65,7 +65,7 @@ Install:
 = Other installation options
 ====================================================
 
-    Github: https://github.com/junegunn/fzf#installation 
+    Github: https://github.com/junegunn/fzf#installation
 
 
 EOF

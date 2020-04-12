@@ -59,9 +59,11 @@ function InstallManager(){
   echo -e "\n${YELLOW}Install Manager...${YELLOW}${NC}"
   curl -LO ${URL}
   echo -e "\n${YELLOW}Given permissions...${YELLOW}${NC}"
-  chmod +x ./manager
-  echo -e "\n${YELLOW}Move manager to${YELLOW}${NC} ${BLUE}/usr/local/bin...${BLUE}${NC}"
-  mv ./manager /usr/local/bin/manager 
+  chmod +x ./manager.sh
+  echo -e "\n${YELLOW}Copy manager to${YELLOW}${NC} ${BLUE}/usr/local/bin...${BLUE}${NC}"
+  cp ./manager.sh /usr/local/bin/manager
+  echo -e "\n${YELLOW}Remove manager script of this context${NC}"
+  rm -rf ./manager.sh
 }
 
 # ==============================================================================

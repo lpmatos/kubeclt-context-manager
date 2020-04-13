@@ -45,3 +45,6 @@ back:
 
 down:
 	docker-compose down
+
+delete:
+	docker-compose down --rmi all

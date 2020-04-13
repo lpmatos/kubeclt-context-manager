@@ -1,5 +1,5 @@
 # ==============================================================================
-## DESCRIPTION: Setup Install Kubectl Context Manager.
+## DESCRIPTION: Setup Installation.
 ## NAME: install.sh
 ## AUTHOR: Lucca Pessoa da Silva Matos
 ## DATE: 12.04.2020
@@ -46,23 +46,24 @@ function Welcome(){
   echo -e "* ${DATE_INFO}"
   echo -e "* System - ${OS}"
   echo -e "*"
+  echo -e "* Version: ${YELLOW}1.0${NC}"
   echo -e "* Autor: ${YELLOW}Lucca Pessoa da Silva Matos${YELLOW}${NC}"
   echo -e "* Description: ${BLUE}Install Kubectl Context Manager${BLUE}${NC}"
   echo -e "-------------------------------------------------\n"
 }
 
 function ManagerAlredyExist(){
-  echo -e "\nManager Alredy in your Syste! Bye Bye!\n" && exit 1
+  echo -e "\nManager is already installed on the System! Bye Bye!\n" && exit 1
 }
 
 function InstallManager(){
-  echo -e "\n${YELLOW}Install Manager...${YELLOW}${NC}"
+  echo -e "\n${YELLOW}Installing Manager...${YELLOW}${NC}"
   curl -LO ${URL}
-  echo -e "\n${YELLOW}Given permissions...${YELLOW}${NC}"
+  echo -e "\n${YELLOW}Giving permissions...${YELLOW}${NC}"
   chmod +x ./manager.sh
-  echo -e "\n${YELLOW}Copy manager to${YELLOW}${NC} ${BLUE}/usr/local/bin...${BLUE}${NC}"
+  echo -e "\n${YELLOW}Copying manager to${YELLOW}${NC} ${BLUE}/usr/local/bin...${BLUE}${NC}"
   cp ./manager.sh /usr/local/bin/manager
-  echo -e "\n${YELLOW}Remove manager script of this context${NC}"
+  echo -e "\n${YELLOW}Removing manager script of this context${NC}"
   rm -rf ./manager.sh
 }
 

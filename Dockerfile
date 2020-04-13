@@ -1,4 +1,5 @@
 ARG ALPINE_VERSION=3.11
+
 ARG KUBECONFIG=/root/.kube/config
 ARG KUBECONFIG_CLUSTER
 
@@ -26,7 +27,3 @@ RUN apk update && apk add --update --no-cache \
     chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl && mkdir -p /root/.kube
 
 RUN curl -LO https://raw.githubusercontent.com/lpmatos/kubeclt-context-manager/master/setup/docker.sh && chmod +x ./docker.sh
-
-ENTRYPOINT []
-
-CMD []

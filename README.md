@@ -47,6 +47,8 @@
 </p>
 
 <p align="center">
+  <a href="#description">Description</a>
+  <a href="#installation">Installation</a>
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
 </p>
@@ -61,13 +63,13 @@ git clone --depth 1 https://github.com/lpmatos/kubeclt-context-manager.git -b ma
 
 This will give access on your local machine to this project.
 
-## Buy me a coffee
+## ☕ Buy me a coffee
 
 Pull requests are welcome. If you'd like to support the work and buy me a ☕, I greatly appreciate it!
 
 <a href="https://www.buymeacoffee.com/EatdMck" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-### Prerequisites
+## 🚏 Pre-requisites
 
 To this project you yeed:
 
@@ -78,7 +80,7 @@ To this project you yeed:
   - **Figlet**.
   - **Kubectl**.
 
-## Built with
+## 🚧 Built with
 
 - **Dev Tools**
   - [Bash](https://www.gnu.org/software/bash/)
@@ -87,12 +89,12 @@ To this project you yeed:
   - [FZF](https://github.com/junegunn/fzf)
   - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-## How to use it?
+## 🚩 How to use it?
 
 1. Install the plugin in your System.
 2. Run the manager.
 
-## Description
+## 📃 Description
 
 Why do boring task to change a kubectl context, when u can do this in a simple command? This is a simple Bash script that perform this for you.
 
@@ -105,13 +107,13 @@ Besides everything, there are other features:
 * List o your contexts.
 * Describe pods each namespace.
 
-## Kubectl
+## 💻 Kubectl
 
 ![Alt text](docs/images/KUBECTL.PNG?raw=true "Kubectl")
 
 Kubectl is a command line tool for controlling Kubernetes clusters. For more information, access the [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) documentation or [this](docs/annotations/commands.md).
 
-## Installation
+## 🔎 Installation
 
 To install this plugin you can run the installation script:
 
@@ -131,7 +133,7 @@ rm -rf ./manager.sh
 
 ## 🐋 Development with Docker
 
-Steps to build a Docker Image.
+Steps to build the Docker Image.
 
 ### Build
 
@@ -142,7 +144,7 @@ docker image build -t <IMAGE_NAME> . (This context)
 
 ### Run
 
-Steps to run a Docker Container.
+Steps to run the Docker Container.
 
 * **Linux** running:
 
@@ -179,15 +181,15 @@ Down all services and delete all images.
 docker-compose down --rmi all
 ```
 
-## Usage
+## 📣 Usage
 
 <kbd>manager --help</kbd> - Helper
 
-## Params
+## 📄 Params
 
 ![Alt text](docs/images/USAGE.PNG?raw=true "Usage")
 
-## Link Reference
+## 📋 Link Reference
 
 * https://kubernetes.io/pt/docs/reference/kubectl/cheatsheet/
 * https://medium.com/platformer-blog/using-kubernetes-secrets-5e7530e0378a
@@ -253,7 +255,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
   <tr>
 </table>
 
-## Project Status
+## ✳️ Project Status
 
 * ✔️ Finish
 
